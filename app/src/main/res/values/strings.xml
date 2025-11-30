@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BookShelfApp</string>
+
+    <string name="no_description">Description wasn\'t provided</string>
+    <string name="loading">Loading</string>
+    <string name="loading_failed">Loading failed</string>
 </resources>

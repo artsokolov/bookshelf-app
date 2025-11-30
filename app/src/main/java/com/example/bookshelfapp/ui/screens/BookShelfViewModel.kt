@@ -10,13 +10,13 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.bookshelfapp.BookShelfApplication
-import com.example.bookshelfapp.data.BooksRepository
-import com.example.bookshelfapp.data.responses.BookResponse
+import com.example.bookshelfapp.domain.repository.BooksRepository
+import com.example.bookshelfapp.domain.entity.Book
 import kotlinx.coroutines.launch
 import java.io.IOException
 
 sealed interface BookShelfUiState {
-    data class Success(val books: List<BookResponse>) : BookShelfUiState
+    data class Success(val books: List<Book>) : BookShelfUiState
     object Error : BookShelfUiState
     object Loading : BookShelfUiState
 }
@@ -36,7 +36,7 @@ class BookShelfViewModel(
         viewModelScope.launch {
             booksShelfUiState = try {
                 val listResult = booksRepository.getBooks(
-                    "kotlin"
+                    "theodore dreiser"
                 )
 
                 BookShelfUiState.Success(

@@ -4,5 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ImageResponse(
-    val thumbnail: String
+    val thumbnail: String,
+    val large: String? = null
 )

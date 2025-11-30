@@ -1,8 +1,8 @@
 package com.example.bookshelfapp
 
 import android.app.Application
-import com.example.bookshelfapp.data.AppContainer
-import com.example.bookshelfapp.data.DefaultAppContainer
+import com.example.bookshelfapp.data.di.AppContainer
+import com.example.bookshelfapp.data.di.DefaultAppContainer
 
 class BookShelfApplication: Application() {
 

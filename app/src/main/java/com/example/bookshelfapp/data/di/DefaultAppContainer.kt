@@ -1,6 +1,8 @@
-package com.example.bookshelfapp.data
+package com.example.bookshelfapp.data.di
 
-import com.example.bookshelfapp.network.BooksApiService
+import com.example.bookshelfapp.data.network.BooksApiService
+import com.example.bookshelfapp.data.repository.NetworkBooksRepository
+import com.example.bookshelfapp.domain.repository.BooksRepository
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
